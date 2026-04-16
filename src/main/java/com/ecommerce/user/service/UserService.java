@@ -1,11 +1,11 @@
 package com.ecommerce.user.service;
 
-import com.app.ecom.dto.AddressDTO;
-import com.app.ecom.dto.UserRequest;
-import com.app.ecom.dto.UserResponse;
-import com.app.ecom.model.Address;
-import com.app.ecom.model.User;
-import com.app.ecom.repository.UserRepository;
+import com.ecommerce.user.dto.AddressDTO;
+import com.ecommerce.user.dto.UserRequest;
+import com.ecommerce.user.dto.UserResponse;
+import com.ecommerce.user.model.Address;
+import com.ecommerce.user.model.User;
+import com.ecommerce.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
