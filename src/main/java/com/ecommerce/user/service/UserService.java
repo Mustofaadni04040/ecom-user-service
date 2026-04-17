@@ -33,7 +33,7 @@ public class UserService {
         userRepository.save(user);
     }
 
-    public Optional<UserResponse> fetchUser(Long id) {
+    public Optional<UserResponse> fetchUser(String id) {
 //        for (User user : userList) {
 //            if (user.getId().equals(id)) {
 //                return user;
@@ -53,7 +53,7 @@ public class UserService {
         user.setAddress(mapToAddress(userRequest.getAddress()));
     }
 
-    public boolean updateUser(Long id, UserRequest userRequest) {
+    public boolean updateUser(String id, UserRequest userRequest) {
         return userRepository.findById(id).map(existingUser -> {
             updateUserFromRequest(existingUser, userRequest);
             userRepository.save(existingUser);

@@ -30,7 +30,7 @@ public class UserController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<String> updateUser(@PathVariable Long id, @RequestBody UserRequest userRequest) {
+    public ResponseEntity<String> updateUser(@PathVariable String id, @RequestBody UserRequest userRequest) {
         boolean updated = userService.updateUser(id, userRequest);
 
         if (updated) {
@@ -41,7 +41,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> getUser(@PathVariable Long id) {
+    public ResponseEntity<?> getUser(@PathVariable String id) {
         Optional<UserResponse> user = userService.fetchUser(id);
 
         if (user.isEmpty()) {
